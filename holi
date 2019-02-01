@@ -16,9 +16,9 @@ def cir(ven):
 def ocultar(ventana):
     v1.withdraw()
  
-br = Button(v1, text="Ver circulo", relief=FLAT,bg='white',command=lambda: ejecutar (cir(v1)))
+br = Button(v1, text="Ver ¿", relief=FLAT,bg='white',command=lambda: ejecutar (cir(v1)))
 br.pack()
-bc = Button(v1, text="Cerrar",relief=FLAT,bg='white', command=lambda: ejecutar(ocultar(v1)))
+bc = Button(v1, text="erar",relief=FLAT,bg='white', command=lambda: ejecutar(ocultar(v1)))
 bc.pack(side = BOTTOM)
 
 v1.mainloop()
