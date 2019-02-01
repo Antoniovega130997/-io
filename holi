@@ -1,0 +1,24 @@
+from Tkinter import *
+
+v1 = Tk()
+v1.title("Figura")
+v1.config(bg="white")
+v1.geometry("250x270")
+
+def ejecutar(f):
+    v1.after(200, f)
+
+def cir(ven):
+    circulo = Canvas(v1,width=210, height=210, bg="white")
+    circulo.pack()
+    circulo.create_oval(10, 10, 200, 200, width=3,fill="blue")
+
+def ocultar(ventana):
+    v1.withdraw()
+ 
+br = Button(v1, text="Ver circulo", relief=FLAT,bg='white',command=lambda: ejecutar (cir(v1)))
+br.pack()
+bc = Button(v1, text="Cerrar",relief=FLAT,bg='white', command=lambda: ejecutar(ocultar(v1)))
+bc.pack(side = BOTTOM)
+
+v1.mainloop()
